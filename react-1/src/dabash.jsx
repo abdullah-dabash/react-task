@@ -53,17 +53,8 @@ function Library() {
   };
 
   return (
-    <div>
-      <header
-        style={{
-          backgroundColor: "#333",
-          color: "#fff",
-          padding: "10px",
-          textAlign: "center",
-        }}
-      >
-        <h1>Book Catalog</h1>
-      </header>
+    
+      
 
       <div style={cardContainerStyle}>
         {books.map((book) => (
@@ -74,19 +65,7 @@ function Library() {
           </div>
         ))}
       </div>
-
-      <footer
-        style={{
-          backgroundColor: "#333",
-          color: "#fff",
-          padding: "10px",
-          textAlign: "center",
-          marginTop: "20px",
-        }}
-      >
-        <p>&copy; 2024 Book Catalog App</p>
-      </footer>
-    </div>
+  
   );
 }
 
