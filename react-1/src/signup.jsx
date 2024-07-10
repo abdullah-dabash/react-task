@@ -22,8 +22,8 @@ function SignUpButton() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Save form data to local storage (optional)
-    localStorage.setItem('formData', JSON.stringify(formData));
+    // Save email to indicate user is logged in
+    localStorage.setItem('email', formData.email);
 
     // Redirect to home page
     window.location.href = '/';  // Direct redirection method

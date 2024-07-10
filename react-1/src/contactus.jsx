@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './header';
 import Footer from './footer';
+import Nav from './nav';
 
 function ContactUsButton() {
   const [formData, setFormData] = useState({
@@ -34,8 +35,10 @@ function ContactUsButton() {
   return (
     <div>
       <Header />
+      <Nav/>
       <div style={{ padding: '20px' }}>
         <h2>Contact Us</h2>
+        
         <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto' }}>
           <div style={{ marginBottom: '15px' }}>
             <label htmlFor="name">Your Name:</label>
@@ -48,6 +51,7 @@ function ContactUsButton() {
               style={{ width: '100%', padding: '8px', fontSize: '16px' }}
               required
             />
+           
           </div>
           <div style={{ marginBottom: '15px' }}>
             <label htmlFor="email">Your Email:</label>
