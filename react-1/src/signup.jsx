@@ -35,58 +35,63 @@ function SignUpButton() {
   return (
     <>
       <Header />
-      <div style={{ padding: '20px' }}>
-        <h2>Sign Up</h2>
-        <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '15px' }}>
-            <label style={{ display: 'block', marginBottom: '5px' }} htmlFor="firstName">First Name:</label>
+      <div className="bg-gray-100 p-6">
+        <h2 className="text-3xl font-bold mb-6">Sign Up</h2>
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+          <div className="mb-4">
+            <label htmlFor="firstName" className="block mb-2">First Name:</label>
             <input
               type="text"
               id="firstName"
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', fontSize: '16px' }}
+              className="w-full p-2 rounded-md border border-gray-300"
               required
             />
           </div>
-          <div style={{ marginBottom: '15px' }}>
-            <label style={{ display: 'block', marginBottom: '5px' }} htmlFor="lastName">Last Name:</label>
+          <div className="mb-4">
+            <label htmlFor="lastName" className="block mb-2">Last Name:</label>
             <input
               type="text"
               id="lastName"
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', fontSize: '16px' }}
+              className="w-full p-2 rounded-md border border-gray-300"
               required
             />
           </div>
-          <div style={{ marginBottom: '15px' }}>
-            <label style={{ display: 'block', marginBottom: '5px' }} htmlFor="email">Email:</label>
+          <div className="mb-4">
+            <label htmlFor="email" className="block mb-2">Email:</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', fontSize: '16px' }}
+              className="w-full p-2 rounded-md border border-gray-300"
               required
             />
           </div>
-          <div style={{ marginBottom: '15px' }}>
-            <label style={{ display: 'block', marginBottom: '5px' }} htmlFor="password">Password:</label>
+          <div className="mb-4">
+            <label htmlFor="password" className="block mb-2">Password:</label>
             <input
               type="password"
               id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', fontSize: '16px' }}
+              className="w-full p-2 rounded-md border border-gray-300"
               required
             />
           </div>
-          <button type="submit" style={{ backgroundColor: '#4CAF50', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Sign Up</button>
+          <button
+            type="submit"
+            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none"
+          >
+            Sign Up
+          </button>
         </form>
       </div>
       <Footer />

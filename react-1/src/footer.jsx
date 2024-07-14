@@ -1,18 +1,10 @@
 function Footer() {
-    return (
-      <footer
-        style={{
-          backgroundColor: "#333",
-          color: "#fff",
-          padding: "10px",
-          textAlign: "center",
-          marginTop: "20px",
-        }}
-      >
-        <p>&copy; 2024 Book Catalog App</p>
-      </footer>
-    );
-  }
-  
-  export default Footer;
-  
+  return (
+    <footer className="bg-gray-800 text-white p-4 text-center mt-6">
+      <p>&copy; 2024 Book Catalog App. All rights reserved.</p>
+      <p className="text-sm">Designed with Tailwind CSS</p>
+    </footer>
+  );
+}
+
+export default Footer;

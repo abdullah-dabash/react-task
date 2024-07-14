@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -17,26 +16,26 @@ function Nav() {
   };
 
   return (
-    <div style={{ backgroundColor: '#f0f0f0', padding: '10px' }}>
-      <nav>
-        <ul style={{ listStyleType: 'none', margin: 0, padding: 0, display: 'flex', justifyContent: 'center' }}>
-          <li style={{ margin: '0 10px' }}>
-            <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Homepage</Link>
+    <div className="bg-gray-200 py-2">
+      <nav className="container mx-auto">
+        <ul className="flex justify-center">
+          <li className="mx-2">
+            <Link to="/" className="text-black hover:text-gray-700">Homepage</Link>
           </li>
-          <li style={{ margin: '0 10px' }}>
-            <Link to="/catalog" style={{ textDecoration: 'none', color: 'black' }}>Catalog</Link>
+          <li className="mx-2">
+            <Link to="/catalog" className="text-black hover:text-gray-700">Catalog</Link>
           </li>
-          <li style={{ margin: '0 10px' }}>
-            <Link to="/aboutus" style={{ textDecoration: 'none', color: 'black' }}>About Us</Link>
+          <li className="mx-2">
+            <Link to="/aboutus" className="text-black hover:text-gray-700">About Us</Link>
           </li>
-          <li style={{ margin: '0 10px' }}>
-            <Link to="/contactus" style={{ textDecoration: 'none', color: 'black' }}>Contact Us</Link>
+          <li className="mx-2">
+            <Link to="/contactus" className="text-black hover:text-gray-700">Contact Us</Link>
           </li>
-          <li style={{ margin: '0 10px' }}>
+          <li className="mx-2">
             {isLoggedIn ? (
-              <button onClick={handleLogout} style={{ textDecoration: 'none', color: 'black', background: 'none', border: 'none', cursor: 'pointer' }}>Logout</button>
+              <button onClick={handleLogout} className="text-black hover:text-gray-700">Logout</button>
             ) : (
-              <Link to="/signup" style={{ textDecoration: 'none', color: 'black' }}>Sign Up</Link>
+              <Link to="/signup" className="text-black hover:text-gray-700">Sign Up</Link>
             )}
           </li>
         </ul>

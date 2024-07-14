@@ -36,47 +36,52 @@ function ContactUsButton() {
     <div>
       <Header />
       <Nav/>
-      <div style={{ padding: '20px' }}>
-        <h2>Contact Us</h2>
+      <div className="bg-gray-100 p-6">
+        <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
         
-        <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '15px' }}>
-            <label htmlFor="name">Your Name:</label>
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+          <div className="mb-4">
+            <label htmlFor="name" className="block mb-2">Your Name:</label>
             <input
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', fontSize: '16px' }}
+              className="w-full p-2 rounded-md border border-gray-300"
               required
             />
-           
           </div>
-          <div style={{ marginBottom: '15px' }}>
-            <label htmlFor="email">Your Email:</label>
+          <div className="mb-4">
+            <label htmlFor="email" className="block mb-2">Your Email:</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', fontSize: '16px' }}
+              className="w-full p-2 rounded-md border border-gray-300"
               required
             />
           </div>
-          <div style={{ marginBottom: '15px' }}>
-            <label htmlFor="message">Message:</label>
+          <div className="mb-4">
+            <label htmlFor="message" className="block mb-2">Message:</label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              style={{ width: '100%', padding: '8px', fontSize: '16px', minHeight: '100px' }}
+              className="w-full p-2 rounded-md border border-gray-300 resize-none"
+              style={{ minHeight: '100px' }}
               required
             />
           </div>
-          <button type="submit" style={{ backgroundColor: '#4CAF50', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>Submit</button>
+          <button
+            type="submit"
+            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none"
+          >
+            Submit
+          </button>
         </form>
       </div>
       <Footer />
@@ -85,6 +90,3 @@ function ContactUsButton() {
 }
 
 export default ContactUsButton;
-
-
-
